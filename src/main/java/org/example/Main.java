@@ -3,12 +3,16 @@ package org.example;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
         Jedis jedis = new Jedis("192.168.11.128", 6379);
         System.out.println(jedis.ping());
+        List<String> s = new LinkedList<>();
+        s.get(0);
         jedis.close();
     }
 
